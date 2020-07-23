@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>DIGITAL IMAGE PROCESSING</title>
+</head>
+<body>
+
+    <table id="OUTPUT">
+    </table>
+    <div id='OUTPUT02'>
+
+    </div>
+
+<script src='IMG_FUNCTIONS.js'></script>
+<script src="HTML_RENDER.js"></script>
+<script src="JUNK/FILTER.js"></script>
+<script src="EDGE_DETECTOR.js"></script>
+
+<script>
+    var canvas = document.getElementById('mycanvas');
+    var context = canvas.getContext('2d');
+
+    context.lineWidth = 1;
+    context.beginPath();
+    context.moveTo(256, 256);
+    context.lineTo(256, 0);
+    context.moveTo(256, 256);
+    context.lineTo(512, 256);
+    context.moveTo(256, 256);
+    context.lineTo(0, 512);
+    context.strokeStyle = "rgb(255, 0, 0)";
+    context.closePath();
+    context.stroke();
+
+
+    let x = 60, y = -20, z = 30;
+    let X = (256 - x) + y;
+    let Y = (256 + x) - z;
+
+    console.log(X, Y);
+
+    let rect = new Shape(X, Y, 1, 1, "rgb(255,255,0)");
+    context.fillStyle = rect.fill;
+    context.fillRect(rect.x, rect.y, rect.w, rect.h);
+
+
+
+
+
+
+    function Shape(x, y, w, h, fill) {
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.h = h;
+    this.fill = fill;
+}
+</script>
+
+
+</body>
+</html>

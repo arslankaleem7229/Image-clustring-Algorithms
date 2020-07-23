@@ -1,0 +1,36 @@
+canvas
+{
+    border: 1px solid orange;
+    /* padding: 10px; */
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+table
+{
+    border-collapse: collapse;
+}
+td
+{
+    border: 1px solid blueviolet;
+    color: blue;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+svg
+{
+    background: black;
+}
+#OUTPUT02
+{
+    /* border: 1px solid red; */
+    /* background: black; */
+    overflow: auto;
+}
+
+#OUTPUT02 > div
+{
+    height: 0.5px;
+    /* margin-top: 1px; */
+    /* border: 0.1px solid black; */
+    overflow: hidden;
+}
